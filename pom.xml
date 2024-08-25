@@ -17,6 +17,8 @@
     <modules>
         <module>fortune-api</module>
         <module>fortune-bdd</module>
+        <module>fortune-backend</module>
+        <module>fortune-common</module>
     </modules>
     <properties>
         <cucumber.version>7.16.1</cucumber.version>
