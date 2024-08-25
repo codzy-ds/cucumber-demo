@@ -12,6 +12,6 @@ import org.junit.platform.suite.api.Suite;
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "org.hamsterlabs.cucumber_demo.stepdefs")
 @ExcludeTags({"wip", "unittest", "integrationtest", "manualtest", "manual"})
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report/cucumber-get-indigestion.html, json:target/cucumber-report/cucumber-get-indigestion.json")
-public class GetIndigestionOfCookies {
+public class GetIndigestionOfCookiesAt {
     // nothing
 }
