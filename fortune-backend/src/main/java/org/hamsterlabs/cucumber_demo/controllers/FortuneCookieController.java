@@ -1,11 +1,17 @@
 package org.hamsterlabs.cucumber_demo.controllers;
 
+import org.hamsterlabs.cucumber_demo.json.CookieJson;
 import org.hamsterlabs.cucumber_demo.repository.LoadCookies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.Mapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
+@RequestMapping("/")
 public class FortuneCookieController {
 
     private final LoadCookies loadCookies;
@@ -16,13 +22,13 @@ public class FortuneCookieController {
     }
 
     @GetMapping("/cookie")
-    public String getCookie() {
+    public CookieJson getCookie() {
         return loadCookies.getRandomCookie();
     }
 
     @GetMapping("/cookies")
-    public String getCookies() {
-        return "You will have a great day!";
+    public List<CookieJson> getCookies() {
+        return loadCookies.getAllCookies();
     }
 
 }

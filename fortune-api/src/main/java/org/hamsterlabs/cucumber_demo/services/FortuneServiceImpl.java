@@ -19,7 +19,7 @@ public class FortuneServiceImpl implements FortuneService {
 
     @Override
     public CookieJson getRandomFortune() {
-        return restTemplate.getForObject(fortuneApiUrl + "/cookies", CookieJson.class);
+        return restTemplate.getForObject(fortuneApiUrl + "/cookie", CookieJson.class);
     }
 
     @Override
