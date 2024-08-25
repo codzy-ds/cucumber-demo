@@ -9,7 +9,7 @@ import org.springframework.test.context.TestPropertySource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = {org.hamsterlabs.cucumber_demo.CucumberDemoApplication.class, BddConfig.class}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = { BddConfig.class})
 @TestPropertySource(properties = "spring.main.allow-bean-definition-overriding=true")
 public class CommonStepDefs extends AbstractStepDefs {
 
