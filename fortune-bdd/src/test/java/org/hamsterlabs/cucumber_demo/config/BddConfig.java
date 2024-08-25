@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @CucumberContextConfiguration
+@SpringBootTest(classes = CucumberDemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class BddConfig {
 
     @Bean
